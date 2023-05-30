@@ -1,0 +1,32 @@
+.header {
+    background-color: #495e5715;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+.navbar {
+    width: 50%;
+    margin:  0 ;
+    justify-content: space-around;
+}
+
+.logo img{
+    width: 200px;
+}
+
+.nav-link {
+    color: #495e57;
+    font-size: large;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #f4ce14;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        display: none !important;
+    }
+}
