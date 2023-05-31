@@ -1,0 +1,33 @@
+.specials {
+    margin-top: 100px;
+}
+
+.specials-header{
+    display: flex;
+    justify-content:space-around ;
+}
+
+.specials-header .btn {
+    background-color: #f4ce14;
+    width: 140%;
+    font-size: larger;
+    border: 3px solid #f4ce14;
+    border-radius: 40px;
+    height: 60px;
+    box-shadow: 0px 0px 10px -5px;
+    cursor: pointer;
+    transition: ease-in .5s;
+    margin-top: 10px;
+}
+
+.specials-header .btn:hover{
+    background-color: #495e57;
+    transition: ease-in .3s;
+    color: white;
+}
+
+@media (max-width: 760px) {
+    .specials-header .btn{
+        width: 100%;
+    }
+}
