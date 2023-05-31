@@ -54,14 +54,17 @@
 }
 
 @media (max-width: 760px) {
-    .image-box img {
-        height: 250px;
-        width: 100%;
-    }
     .left-section p {
         width: 250px;
     }
     .left-section .btn {
         width: 80%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .image-box img {
+    display: none;
     }
 }

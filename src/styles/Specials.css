@@ -30,4 +30,7 @@
     .specials-header .btn{
         width: 100%;
     }
+    .specials-header h1{
+        font-size: x-large;
+    }
 }
