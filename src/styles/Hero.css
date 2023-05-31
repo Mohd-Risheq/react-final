@@ -20,20 +20,20 @@
     height: 380px;
 }
 
-h1 {
+.left-section h1 {
     color: #f4ce14;
 }
 
-h2, p {
+.left-section h2, p {
     color: white;
 }
 
-h2 {
+.left-section h2 {
     margin-top: 0px;
     margin-bottom: 40px;
 }
 
-.btn {
+.left-section .btn {
     background-color: #f4ce14;
     width: 40%;
     font-size: larger;
@@ -47,7 +47,20 @@ h2 {
 
 }
 
-.btn:hover{
+.left-section .btn:hover{
     background-color: #ffffff;
     transition: ease-in .5s;
+}
+
+@media (max-width: 760px) {
+    .image-box img {
+        height: 400px;
+        width: 100%;
+    }
+    .left-section p {
+        width: 250px;
+    }
+    .left-section .btn {
+        width: 80%;
+    }
 }
