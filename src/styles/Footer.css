@@ -6,6 +6,7 @@ footer.footer {
     background-color: #495e5717;
     margin-top: 5%;
     padding:2% 0;
+    flex-wrap: wrap;
 }
 
 .footer-img {
@@ -40,4 +41,19 @@ footer.footer {
 .footer ul li:hover ,a:hover{
     transition: ease-in .3s;
     color: #f4ce14;
+}
+
+@media (max-width: 760px) {
+    .footer-img {
+        width: 80%;
+    }
+    .footer-links{
+        width: 40%;
+    }
+    .footer-contact{
+        width: 60%;
+    }
+    .footer-social{
+        width: 100%;
+    }
 }
