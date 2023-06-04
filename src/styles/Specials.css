@@ -18,6 +18,8 @@
     cursor: pointer;
     transition: ease-in .5s;
     margin-top: 10px;
+    font-family: 'Markazi Text', serif;
+
 }
 
 .specials-header .btn:hover{
@@ -29,8 +31,5 @@
 @media (max-width: 760px) {
     .specials-header .btn{
         width: 100%;
-    }
-    .specials-header h1{
-        font-size: x-large;
     }
 }

@@ -6,6 +6,8 @@ import Menu from "./routes/Menu";
 import Reservations from "./routes/Reservations";
 import Order from "./routes/Order";
 import Login from "./routes/Login";
+import '@fontsource/markazi-text';
+
 
 function App() {
   return (

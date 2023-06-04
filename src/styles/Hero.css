@@ -17,7 +17,7 @@
 }
 
 .left-section {
-    height: 380px;
+    height: 500px;
 }
 
 .left-section h1 {
@@ -44,6 +44,7 @@
     box-shadow: 0px 0px 10px -5px;
     cursor: pointer;
     transition: ease-in .5s;
+    font-family: 'Markazi Text', serif;
 
 }
 
