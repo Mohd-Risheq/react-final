@@ -29,7 +29,7 @@ function Form() {
   const clearForm = () => {
     setDate("");
     setTime("");
-    setguests("");
+    setGuests("");
     setOccasion("occasion");
   };
   const handleSubmit = (e) => {
