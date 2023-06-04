@@ -1,0 +1,18 @@
+.reviews {
+    background-color: #495e57 ;
+    margin-top: 5%;
+
+}
+
+.reviews-header {
+    color: #f4ce14;
+    text-align: center;
+    padding: 2%;
+}
+
+.reviews .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+}

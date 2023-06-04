@@ -1,7 +1,7 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 import Home from "./routes/Home";
-import About from "./routes/About";
+import Aboutus from "./routes/Aboutus";
 import Menu from "./routes/Menu";
 import Reservations from "./routes/Reservations";
 import Order from "./routes/Order";
@@ -12,7 +12,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element = {<Home/>}/>
-        <Route path="/about" element ={<About/>}/>
+        <Route path="/about" element ={<Aboutus/>}/>
         <Route path="/menu" element ={<Menu/>}/>
         <Route path="/reservations" element ={<Reservations/>}/>
         <Route path="/order" element ={<Order/>}/>

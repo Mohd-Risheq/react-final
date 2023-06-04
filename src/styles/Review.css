@@ -1,0 +1,34 @@
+.rev-card {
+    background-color: white;
+    padding: 1% 2%;
+    width: 18%;
+    box-shadow: 0px 0px 10px -5px;
+}
+
+
+.card-image img{
+    width: 100%;
+    border-radius: 200px;
+}
+.card-image {
+    width: 30%;
+}
+.info {
+    display: flex;
+    margin: 5% 0;
+}
+.name {
+    font-weight: bold;
+    font-size: larger;
+    padding: 30px 20px;
+}
+.rev {
+    color: rgb(70, 70, 70);
+}
+
+@media (max-width: 760px) {
+    .rev-card {
+        width: 80%;
+        margin-top:30px ;
+    }
+}
