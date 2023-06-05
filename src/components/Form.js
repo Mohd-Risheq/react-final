@@ -1,34 +1,28 @@
 import "../styles/Form.css"
-import { useState,useEffect } from "react";
+import { useState } from "react";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 function Form() {
+  const [name,setName] = useState("")
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [availableTimes, setAvailableTimes] = useState([]);
   const [guests, setGuests] = useState("");
-  const [occasion,setOccasion] = useState("occasion");
-  useEffect(() => {
-    const timeOptions = [
-      '17:00',
-      '18:00',
-      '19:00',
-      '20:00',
-      '21:00',
-      '22"00',
-    ];
-    setAvailableTimes(timeOptions);
-  }, []);
+  const [occasion, setOccasion] = useState("occasion");
+  const handleDateChange = (date) => {
+    setDate(date);
+  };
+
   const getIsFormValid = () => {
     return (
+      name &&
       date &&
-      time &&
       guests &&
       occasion !== "occasion"
     );
   };
   const clearForm = () => {
+    setName("");
     setDate("");
-    setTime("");
     setGuests("");
     setOccasion("occasion");
   };
@@ -41,32 +35,32 @@ function Form() {
   return (
     <form onSubmit={handleSubmit}>
       <fieldset>
-        <h2>Reserve</h2>
+        <h2>Book a table</h2>
         <div className="field">
-            <label for="date">
-              Choose Date:
+          <label for="name">
+            Full Name:
             </label>
             <input
-              id="date"
-              type="date"
-              placeholder="Date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              minLength={4}
+              maxLength={50}
             />
         </div>
         <div className="field">
-            <label for="time">
-              Choose Time:
+          <label for="date">
+            Date & Time:
             </label>
-            <select
-              id="time"
-              value={time}
-              onChange={(e) =>
-              setTime(e.target.value)}>
-                {availableTimes.map((time, index) => (
-                <option key={index} value={time}>{time}</option>
-              ))}
-            </select>
+            <DatePicker
+              placeholderText="Select"
+              selected={date}
+              onChange={handleDateChange}
+              showTimeSelect
+              timeFormat="HH:mm"
+              dateFormat="dd/MM/yyyy HH:mm"
+            />
         </div>
         <div className="field">
           <label for="guests">
@@ -74,7 +68,7 @@ function Form() {
           </label>
           <input
             type="number"
-            placeholder="Guists"
+            placeholder="Guests"
             min="1"
             max="10"
             id="guests"
@@ -84,20 +78,21 @@ function Form() {
         </div>
         <div className="field">
           <label for="occasion">
-            Select Occasion:
+            Occasion:
           </label>
           <select
-              id="occasion"
-              value={occasion}
-              onChange={(e) =>
+            id="occasion"
+            value={occasion}
+            onChange={(e) =>
               setOccasion(e.target.value)}>
-                <option>Birthday</option>
-                <option>Anniversary</option>
-            </select>
+                <option disabled>Select</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+          </select>
         </div>
-        <button type="submit" disabled={!getIsFormValid()}>
-            Reserve
-          </button>
+        <button className="btn" type="submit" disabled={!getIsFormValid()}>
+          Reserve
+        </button>
       </fieldset>
     </form>
   );
